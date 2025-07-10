@@ -38,7 +38,7 @@
 @media screen and (max-width: 830px) {
     .navbar {
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
     }
 
     .menu {
@@ -56,6 +56,10 @@
         cursor: pointer;
     }
 
+    .menuItems a {
+        font-size: 25px;
+    }
+
     .menuItems {
         display: none;
         flex-direction: column;
@@ -64,15 +68,11 @@
         border-radius: 10px;
         background: rgb(25, 55, 109); /*  Backup incase linear-gradient isn't supported */
         background: linear-gradient(
-            0deg, 
-            rgba(25, 55, 109, 0.2) 0%, 
-            rgba(25, 55, 109, 1) 100%);
+            0deg, /* Vertical */
+            rgba(25, 55, 109, 0.2) 0%, /* Starting val */
+            rgba(25, 55, 109, 1) 100%); /* Ending val */
         padding: 24px 33px;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    }
-    
-    .menuItems a {
-        font-size: 25px;
     }
 
     .menuOpen {

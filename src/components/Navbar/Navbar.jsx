@@ -13,16 +13,16 @@ export const Navbar = () => {
             <img className={styles.menuBtn} 
                 src={
                     menuOpen 
-                    ? getImageUrl("nav/menuIcon.png") 
-                    : getImageUrl("nav/closeIcon.png")
+                    ? getImageUrl("nav/closeIcon.png")
+                    : getImageUrl("nav/menuIcon.png")
                 }
                 alt="menu-button"
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={() => setMenuOpen(!menuOpen)} /* Toggle menuOpen */
             />
-            {/* Apply menuOpen style conditionally */}
-            <ul
+            
+            <ul /* Apply menuOpen style conditionally based on menuOpen bool*/
                 className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => setMenuOpen(false)} /* Toggle menuOpen when an item is clicked */
             >
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
