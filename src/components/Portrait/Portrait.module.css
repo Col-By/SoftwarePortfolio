@@ -54,6 +54,10 @@
     width: 50%;
     z-index: 1;
 
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
+
+    mask-mode: alpha;
+
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
